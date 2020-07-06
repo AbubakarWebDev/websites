@@ -1,0 +1,1824 @@
+/*--------------css style sheet----------------
+          * Section:01 Header CSS
+          * Section:02 Content CSS
+          * Section:03 Footer CSS
+          * Section:04 Media Queries CSS
+*--------------css style sheet----------------*/
+
+/*-------------- Colors Scheme in CSS -----------------
+          * Color: White           >       #ffffff
+          * Color: Black           >       #000000
+          * Color: DARK GREY       >       #414141
+          * Color: Prussian Blue   >       #003459
+          * Color: Meat Brown      >       #F3B73B
+          * Color: Vivid Cerulean  >       #00A8F8
+*-------------- Colors Scheme in CSS -----------------*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*----------------------------------------------
+          * Section:01 Header CSS
+----------------------------------------------*/
+
+/*-------------------------------
+   Toggle Bar For Mobile View 
+--------------------------------*/
+
+#toggle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #414141;
+  width: 100%;
+  height: 65px;
+  border-top: 7px solid #EBAE36;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  height: 58px;
+  font-size: 23px;
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #414141;
+  text-transform: uppercase;
+  background-color: #ebae36;
+}
+
+.nav-logo {
+  display: none;
+}
+
+#toggle-button {
+  color: #fff;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+#toggle-button:hover {
+  color: #ebae36;
+}
+
+#menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #414141;
+  padding: 30px 0px 15px 0px;
+  border-top: 7px solid #EBAE36;
+  border-bottom: 7px solid #EBAE36;
+  position: fixed;
+  margin-top: 5px;
+  z-index: 5;
+  transform: scale(0, 0);
+  transform-origin: top right;
+  transition: all 0.4s linear 0s;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 15px 0px;
+  text-decoration: none;
+  color: #ebae36;
+}
+
+.menu-item:hover {
+  color: #ffffff;
+}
+
+#check-box:checked~#menu {
+  transform: scale(1, 1);
+}
+
+#check-box {
+  display: none;
+}
+
+/*------- Search Form For Mobile View -------*/
+
+#search-form {
+  display: flex;
+  width: 270px;
+  height: 40px;
+  transform: scale(0, 0);
+  transform-origin: top center;
+}
+
+#search-bar {
+  width: 220px;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#search-bar::placeholder {
+  font-size: 20px;
+  color: #414141;
+}
+
+#search-button {
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  border: none;
+  background-color: #167EE5;
+}
+
+#check-box-2 {
+  display: none;
+}
+
+#search-form-opener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: #F3B73B;
+  width: 60px;
+  height: 40px;
+}
+
+#search-form-opener:hover {
+  color: #fff;
+}
+
+#search-form-closer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: #F3B73B;
+  width: 60px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  display: none;
+}
+
+#search-form-closer:hover {
+  color: #fff;
+}
+
+#check-box-2:checked~#search-form {
+  transform: scale(1, 1);
+}
+
+#check-box-2:checked~#search-form-closer {
+  display: flex;
+}
+
+#check-box-2:checked~#search-form-opener {
+  display: none;
+}
+
+/*----------------------------------------------
+          * End of Section:01 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Content CSS
+----------------------------------------------*/
+
+/*---------------------------------
+      Featured Content CSS
+----------------------------------*/
+
+#featured-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  margin-top: 60px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/featured-area-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+#featured-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featured-description {
+  text-align: center;
+  font-size: 12px;
+  color: #EDEDED;
+  margin: 20px 0px;
+  padding: 0px 5px;
+}
+
+#featured-heading {
+  text-align: center;
+  font-size: 40px;
+  color: #EDEDED;
+}
+
+#button-section {
+  display: flex;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#button-one {
+  width: 110px;
+  height: 35px;
+  background-color: #EDEDED;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+#button-one:hover {
+  background-color: rgba(243, 182, 59);
+}
+
+#button-two {
+  margin-left: 5px;
+  width: 110px;
+  height: 35px;
+  background-color: transparent;
+  color: #EDEDED;
+  font-size: 13px;
+  font-weight: bold;
+  border: 3px solid #EDEDED;
+  outline: none;
+}
+
+#button-two:hover {
+  color: black;
+  background-color: rgba(243, 182, 59);
+  border: none;
+}
+
+/*---------------------------------
+     Article Content CSS
+----------------------------------*/
+
+#main-article {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0px 50px 0px;
+  background-color: #EDEDED;
+}
+
+#article-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#article-content-heading {
+  font-family: 'Tahoma', serif;
+  font-size: 25px;
+}
+
+#article-content-para {
+  font-size: 14px;
+  margin: 10px 0px 30px 0px;
+}
+
+#article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.article-ico {
+  width: 160px;
+}
+
+.article-heading {
+  font-size: 25px;
+  margin: 10px 0px;
+}
+
+.article-para {
+  font-size: 15px;
+  padding: 0px 16px;
+}
+
+.article-button {
+  text-transform: uppercase;
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
+  margin: 20px 0px;
+  color: black;
+  font-weight: bolder;
+  background-color: transparent;
+  border: 3px solid black;
+}
+
+.article-button:hover {
+  background-color: #ebae36;
+  border: 3px solid #ebae36;
+}
+
+/*---------------------------------
+     Services Content CSS
+----------------------------------*/
+
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/Services-area-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+#services-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#services-content-heading {
+  font-family: 'Tahoma', serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 40px;
+}
+
+#services-content-para {
+  margin: 10px 0px 20px 0px;
+  color: #fff;
+  font-size: 16px;
+}
+
+#services-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-item-sub-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 95vw;
+  height: 200px;
+  margin: 10px 0px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.services-ico {
+  font-size: 60px;
+  color: #EBAE36;
+}
+
+.services-item-heading {
+  margin-top: 30px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay-heading {
+  font-size: 25px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.overlay-para {
+  text-align: center;
+  margin: 8px 0px 15px 0px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.overlay-button {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ebae36;
+  border: 3px solid #ebae36;
+  background-color: transparent;
+  width: 120px;
+  height: 35px;
+}
+
+.overlay-button:hover {
+  background-color: #ebae36;
+  color: #000000;
+  font-weight: bold;
+}
+
+.services-item:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+/*---------------------------------
+    MEAT OUR TEAM CONTENT CSS
+----------------------------------*/
+
+#team {
+  display: flex;
+  flex-direction: column;
+  background-color: #EDEDED;
+  padding: 50px 0px;
+}
+
+#team-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 95vw;
+  margin: 0 auto;
+}
+
+#team-content-heading {
+  font-family: 'Tahoma', serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+#team-content-para {
+  font-size: 16px;
+  margin: 10px 0px 30px 0px;
+}
+
+#team-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-img {
+  width: 95vw;
+}
+
+.team-item-heading-1 {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.team-item-heading-2 {
+  margin: 5px 0px 10px 0px;
+  font-size: 25px;
+  color: #7a7a7a;
+  font-weight: normal;
+}
+
+/*---------------------------------
+   'BUY NOW' TEAM CONTENT CSS
+----------------------------------*/
+
+#buynow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #464f5e;
+  padding: 20px 0px 30px 0px;
+  position: relative;
+}
+
+#buynow-description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+
+#buynow-heading {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+  color: #fff;
+  margin: 0px 0px 50px 0px;
+  position: relative;
+}
+
+#sliding-vertical {
+  text-indent: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.change-text {
+  color: #A2E050;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  animation: change-text 6s ease-in-out 0s infinite;
+}
+
+.text-2 {
+  animation-delay: 2s;
+}
+
+.text-3 {
+  animation-delay: 4s;
+}
+
+@keyframes change-text {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#buynow-para {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+#buynow-button {
+  width: 90vw;
+  height: 45px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px 0px 0px 0px;
+}
+
+#buynow-button:hover {
+  background-color: #EBAE36;
+  color: #000000;
+  border: none;
+}
+
+/*---------------------------------
+    'RECENT POST' TEAM CONTENT CSS
+----------------------------------*/
+
+#recent-post {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0px 50px 0px;
+  background-color: #EDEDED;
+}
+
+#recent-post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#recent-post-content-heading {
+  font-size: 35px;
+  font-family: 'Tahoma', serif;
+  text-transform: uppercase;
+}
+
+#recent-post-content-para {
+  font-size: 16px;
+  margin: 10px 0px 40px 0px;
+}
+
+#post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.post-img-container {
+  width: 90vw;
+  height: 250px;
+  overflow: hidden;
+}
+
+.post-img {
+  width: 90vw;
+  height: 250px;
+  transition: transform 3s linear 0s;
+}
+
+.post-img:hover {
+  transform: scale(2);
+}
+
+.post-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 10px;
+  width: 90vw;
+  height: 220px;
+  background-color: #464F5E;
+  margin-bottom: 10px;
+}
+
+.post-heading {
+  font-size: 25px;
+  color: #EDEDED;
+  text-transform: uppercase;
+}
+
+.post-para {
+  font-size: 15px;
+  color: #EDEDED;
+  margin-top: 5px;
+}
+
+.post-button {
+  width: 120px;
+  height: 35px;
+  background-color: transparent;
+  border: 3px solid #EDEDED;
+  color: #EDEDED;
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.post-button:hover {
+  border: 3px solid #EBAE36;
+  color: #EBAE36;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background-color: #464F5E;
+}
+
+/*---------------------------------
+   'GET IN TOUCH' TEAM CONTENT CSS
+----------------------------------*/
+
+#touch {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-color: #EDEDED;
+  flex-direction: column;
+}
+
+#touch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}
+
+#touch-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#touch-content-heading {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+#touch-content-para {
+  font-size: 16px;
+  margin: 10px 0px 50px 0px;
+}
+
+#subscribe-form {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 40px;
+}
+
+#email-bar {
+  width: 220px;
+  height: 40px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+#email-bar::placeholder {
+  font-size: 18px;
+  color: #414141;
+}
+
+#subscribe-button {
+  width: 80px;
+  height: 40px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #464f5e;
+  border: none;
+}
+
+#subscribe-button:hover {
+  color: #000000;
+  background-color: #EBAE36;
+}
+
+/*----------------------------------------------
+          * End of Section:02 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Footer CSS
+----------------------------------------------*/
+
+#main-footer {
+  width: 100%;
+  background-color: #414141;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#footer-copyright {
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 20px;
+}
+
+#footer-social-icon {
+  display: flex;
+}
+
+.f-s-icon {
+  font-size: 25px;
+  padding: 0px 10px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.f-s-icon:hover {
+  color: #A2E050;
+}
+
+/*----------------------------------------------
+          * End of Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Media Queries CSS
+----------------------------------------------*/
+
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+*/
+
+/* ------- Very Large Screen Media Queries (1920px-Greater) ------- */
+
+@media only screen and (min-width: 1400px) {
+  /*------ Section:01 Header Media Queries ------*/
+  #toggle-bar {
+    display: none;
+  }
+  #nav-bar {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #414141;
+    width: 100%;
+    height: 80px;
+    border-top: 7px solid #EBAE36;
+  }
+  .logo {
+    width: 250px;
+    font-size: 35px;
+    height: 73px;
+  }
+  .nav-logo {
+    display: flex;
+  }
+  #menu {
+    width: auto;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border: none;
+    position: relative;
+    padding: 0;
+    margin: 0px 20px 0px 0px;
+    transform: none;
+    transition: none;
+  }
+  .menu-item {
+    margin: 0px 0px 0px 20px;
+  }
+  /*------- Search Form For Desktop View -------*/
+  #search-form {
+    width: 400px;
+    position: absolute;
+    left: 19.5%;
+    z-index: 1;
+    transform-origin: right center;
+  }
+  #search-bar {
+    width: 320px;
+  }
+  #search-button {
+    width: 80px;
+  }
+  #search-form-closer {
+    margin: 0;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  /*------- Featured Content For Desktop View -------*/
+  .featured-description {
+    font-size: 20px;
+  }
+  #featured-heading {
+    font-size: 75px;
+  }
+  #button-one {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+  }
+  #button-two {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+  }
+  /*------- Article Content For Desktop View -------*/
+  #article-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #article-content-heading {
+    font-size: 40px;
+  }
+  #article-content-para {
+    font-size: 18px;
+  }
+  #article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .article {
+    width: 20%;
+  }
+  .article-para {
+    text-align: justify;
+    font-size: 18px;
+    padding: 0;
+  }
+  /*------- Services Content For Desktop View -------*/
+  #services-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #services-content-heading {
+    letter-spacing: 3px;
+    font-size: 40px;
+  }
+  #services-content-para {
+    font-size: 18px;
+  }
+  #services-item-container {
+    flex-direction: row;
+  }
+  .services-item {
+    width: 500px;
+    margin: 10px 10px 0px 0px;
+  }
+  .overlay-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .overlay-heading {
+    font-size: 28px;
+  }
+  .overlay-para {
+    margin: 15px 0px;
+    font-size: 18px;
+  }
+  /*------- 'Meat Our Team' Content For Desktop View -------*/
+  #team-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #team-content-heading {
+    font-size: 40px;
+  }
+  #team-content-para {
+    font-size: 18px;
+  }
+  #team-container {
+    flex-direction: row;
+  }
+  .team-img {
+    width: 400px;
+  }
+  .team-item-heading-2 {
+    margin: 5px 0px 0px 0px;
+  }
+  /*------- 'Buy Now' Content For Desktop View -------*/
+  #buynow {
+    flex-direction: row;
+    padding: 50px 0px;
+    align-items: center;
+  }
+  .change-text {
+    top: 0;
+  }
+  #sliding-vertical {
+    display: inline;
+    text-indent: 8px;
+  }
+  #buynow-description {
+    text-align: left;
+    margin: 0px 0px 0px 20px;
+  }
+  #buynow-heading {
+    font-size: 40px;
+    margin: 0px 0px 25px 0px;
+  }
+  #buynow-para {
+    font-size: 20px;
+  }
+  #buynow-button {
+    width: 200px;
+    height: 45px;
+    margin: 0px 20px 0px 0px;
+  }
+  /*------- 'RESENT POST' Content For Desktop View -------*/
+  #recent-post-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #recent-post-content-para {
+    font-size: 18px;
+  }
+  #post-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .post-img-container {
+    width: 600px;
+    height: 300px;
+  }
+  .post-img {
+    width: 600px;
+    height: 300px;
+  }
+  .post-description {
+    padding: 0px 20px;
+    width: 600px;
+    height: 200px;
+  }
+  .post-heading {
+    font-size: 25px;
+  }
+  .post-para {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .post-button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  /*------- 'GET IN TOUCH' Content For Desktop View -------*/
+  #touch-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #touch-content-heading {
+    font-size: 40px;
+  }
+  #touch-content-para {
+    font-size: 20px;
+  }
+  #subscribe-form {
+    width: 600px;
+    height: 50px;
+  }
+  #email-bar {
+    width: 450px;
+    height: 50px;
+    font-size: 25px;
+  }
+  #email-bar::placeholder {
+    font-size: 25px;
+  }
+  #subscribe-button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /*------- Section 03 Footer Media Queries -------*/
+  #main-footer {
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+  }
+  #footer-copyright {
+    font-size: 18px;
+    margin: 0;
+  }
+  .f-s-icon {
+    font-size: 25px;
+    padding: 0px 10px;
+    margin: 0;
+  }
+}
+
+/* ------- Desktops and Laptops Media Queries (1280px-1024px) ------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {
+  /*------ Section:01 Header Media Queries ------*/
+  #toggle-bar {
+    display: none;
+  }
+  #nav-bar {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #414141;
+    width: 100%;
+    height: 80px;
+    border-top: 7px solid #EBAE36;
+  }
+  .logo {
+    width: 230px;
+    font-size: 33px;
+    height: 73px;
+  }
+  .nav-logo {
+    display: flex;
+  }
+  #menu {
+    width: auto;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    position: relative;
+    border: none;
+    padding: 0;
+    margin: 0px 20px 0px 0px;
+    transform: none;
+    transition: none;
+  }
+  .menu-item {
+    margin: 0px 0px 0px 20px;
+  }
+  /*------- Search Form For Desktop View -------*/
+  #search-form {
+    width: 400px;
+    position: absolute;
+    left: 19.5%;
+    z-index: 1;
+    transform-origin: right center;
+  }
+  #search-bar {
+    width: 320px;
+  }
+  #search-button {
+    width: 80px;
+  }
+  #search-form-closer {
+    margin: 0;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  /*------- Featured Content For Desktop View -------*/
+  .featured-description {
+    font-size: 16px;
+  }
+  #featured-heading {
+    font-size: 70px;
+  }
+  #button-one {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+  }
+  #button-two {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+  }
+  /*------- Article Content For Desktop View -------*/
+  #article-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #article-content-heading {
+    font-size: 40px;
+  }
+  #article-content-para {
+    font-size: 18px;
+  }
+  #article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .article {
+    width: 20%;
+  }
+  .article-para {
+    text-align: justify;
+    font-size: 16px;
+    padding: 0;
+  }
+  /*------- Services Content For Desktop View -------*/
+  #services-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #services-content-heading {
+    letter-spacing: 3px;
+    font-size: 40px;
+  }
+  #services-content-para {
+    font-size: 18px;
+  }
+  #services-item-container {
+    flex-direction: row;
+  }
+  .services-item {
+    width: 490px;
+    margin: 10px 10px 0px 0px;
+  }
+  .overlay-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .overlay-heading {
+    font-size: 28px;
+  }
+  .overlay-para {
+    margin: 15px 0px;
+    font-size: 18px;
+  }
+  /*------- 'Meat Our Team' Content For Desktop View -------*/
+  #team-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #team-content-heading {
+    font-size: 40px;
+  }
+  #team-content-para {
+    font-size: 18px;
+  }
+  #team-container {
+    flex-direction: row;
+  }
+  .team-img {
+    width: 300px;
+  }
+  .team-item-heading-2 {
+    margin: 5px 0px 0px 0px;
+  }
+  /*------- 'Buy Now' Content For Desktop View -------*/
+  #buynow {
+    flex-direction: row;
+    padding: 50px 0px;
+    align-items: center;
+  }
+  .change-text {
+    top: 0;
+  }
+  #sliding-vertical {
+    display: inline;
+    text-indent: 8px;
+  }
+  #buynow-description {
+    text-align: left;
+    margin: 0px 0px 0px 20px;
+  }
+  #buynow-heading {
+    font-size: 40px;
+    margin: 0px 0px 25px 0px;
+  }
+  #buynow-para {
+    font-size: 20px;
+  }
+  #buynow-button {
+    width: 200px;
+    height: 45px;
+    margin: 0px 20px 0px 20px;
+  }
+  /*------- 'RESENT POST' Content For Desktop View -------*/
+  #recent-post-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #recent-post-content-para {
+    font-size: 18px;
+  }
+  #post-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .post {
+    margin-left: 10px;
+  }
+  .post-img-container {
+    width: 480px;
+    height: 300px;
+  }
+  .post-img {
+    width: 480px;
+    height: 300px;
+  }
+  .post-description {
+    padding: 0px 20px;
+    width: 480px;
+    height: 200px;
+  }
+  .post-heading {
+    font-size: 25px;
+  }
+  .post-para {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .post-button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  /*------- 'GET IN TOUCH' Content For Desktop View -------*/
+  #touch-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #touch-content-heading {
+    font-size: 40px;
+  }
+  #touch-content-para {
+    font-size: 18px;
+  }
+  #subscribe-form {
+    width: 600px;
+    height: 50px;
+  }
+  #email-bar {
+    width: 450px;
+    height: 50px;
+    font-size: 25px;
+  }
+  #email-bar::placeholder {
+    font-size: 25px;
+  }
+  #subscribe-button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /*------- Section 03 Footer Media Queries -------*/
+  #main-footer {
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+  }
+  #footer-copyright {
+    font-size: 18px;
+    margin: 0;
+  }
+  .f-s-icon {
+    font-size: 25px;
+    padding: 0px 10px;
+    margin: 0;
+  }
+}
+
+/* ------- Tablets landscape Media Queries (1024px-768px) ------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /*------ Section:01 Header Media Queries ------*/
+  #toggle-bar {
+    display: none;
+  }
+  #nav-bar {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #414141;
+    width: 100%;
+    height: 80px;
+    border-top: 7px solid #EBAE36;
+  }
+  .logo {
+    width: 180px;
+    font-size: 25px;
+    height: 73px;
+  }
+  .nav-logo {
+    display: flex;
+  }
+  #menu {
+    width: auto;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+    margin: 0px 10px 0px 0px;
+    transform: none;
+    transition: none;
+  }
+  .menu-item {
+    margin: 0px 0px 0px 15px;
+  }
+  /*------- Search Form For Desktop View -------*/
+  #search-form {
+    width: 400px;
+    position: absolute;
+    left: 16%;
+    z-index: 1;
+    transform-origin: right center;
+  }
+  #search-bar {
+    width: 320px;
+  }
+  #search-button {
+    width: 80px;
+  }
+  #search-form-closer {
+    margin: 0;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  /*------- Featured Content For Desktop View -------*/
+  .featured-description {
+    font-size: 16px;
+  }
+  #featured-heading {
+    font-size: 60px;
+  }
+  #button-one {
+    width: 125px;
+    height: 40px;
+    font-size: 14px;
+  }
+  #button-two {
+    width: 125px;
+    height: 40px;
+    font-size: 14px;
+  }
+  /*------- Article Content For Desktop View -------*/
+  #article-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #article-content-heading {
+    font-size: 40px;
+  }
+  #article-content-para {
+    font-size: 18px;
+  }
+  #article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .article {
+    width: 20%;
+  }
+  .article-ico {
+    width: 120px;
+  }
+  .article-heading {
+    font-size: 20px;
+  }
+  .article-para {
+    text-align: justify;
+    font-size: 14px;
+    padding: 0;
+  }
+  .article-button {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+  }
+  /*------- Services Content For Desktop View -------*/
+  #services-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #services-content-heading {
+    letter-spacing: 3px;
+    font-size: 40px;
+  }
+  #services-content-para {
+    font-size: 18px;
+  }
+  #services-item-container {
+    flex-direction: row;
+  }
+  .services-item {
+    width: 360px;
+    margin: 10px 10px 0px 0px;
+  }
+  .overlay-heading {
+    font-size: 28px;
+  }
+  .overlay-para {
+    margin: 15px 0px;
+    font-size: 16px;
+  }
+  /*------- 'Meat Our Team' Content For Desktop View -------*/
+  #team-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #team-content-heading {
+    font-size: 40px;
+  }
+  #team-content-para {
+    font-size: 18px;
+  }
+  #team-container {
+    flex-direction: row;
+  }
+  .team-img {
+    width: 240px;
+  }
+  .team-item-heading-1 {
+    font-size: 25px;
+  }
+  .team-item-heading-2 {
+    font-size: 20px;
+    margin: 5px 0px 0px 0px;
+  }
+  /*------- 'Buy Now' Content For Desktop View -------*/
+  #buynow {
+    flex-direction: row;
+    padding: 50px 0px;
+    align-items: center;
+  }
+  .change-text {
+    top: 0;
+  }
+  #sliding-vertical {
+    display: inline;
+    text-indent: 8px;
+  }
+  #buynow-description {
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+  }
+  #buynow-heading {
+    font-size: 30px;
+    margin: 0px 0px 25px 0px;
+  }
+  #buynow-para {
+    font-size: 18px;
+  }
+  #buynow-button {
+    width: 150px;
+    height: 40px;
+    margin: 0px 20px 0px 20px;
+    font-size: 16px;
+  }
+  /*------- 'RESENT POST' Content For Desktop View -------*/
+  #recent-post-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #recent-post-content-para {
+    font-size: 18px;
+  }
+  #post-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .post {
+    margin-left: 10px;
+  }
+  .post-img-container {
+    width: 44vw;
+    height: 300px;
+  }
+  .post-img {
+    width: 44vw;
+    height: 300px;
+  }
+  .post-description {
+    padding: 0px 20px;
+    width: 44vw;
+    height: 200px;
+  }
+  .post-heading {
+    font-size: 20px;
+  }
+  .post-para {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .post-button {
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  /*------- 'GET IN TOUCH' Content For Desktop View -------*/
+  #touch-content {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #touch-content-heading {
+    font-size: 40px;
+  }
+  #touch-content-para {
+    font-size: 18px;
+  }
+  #subscribe-form {
+    width: 600px;
+    height: 50px;
+  }
+  #email-bar {
+    width: 450px;
+    height: 50px;
+    font-size: 25px;
+  }
+  #email-bar::placeholder {
+    font-size: 25px;
+  }
+  #subscribe-button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /*------- Section 03 Footer Media Queries -------*/
+  #main-footer {
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+  }
+  #footer-copyright {
+    font-size: 18px;
+    margin: 0;
+  }
+  .f-s-icon {
+    font-size: 25px;
+    padding: 0px 10px;
+    margin: 0;
+  }
+}
+
+/* ------- Tablets Portrait Media Queries (768px-480px) ------- */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /*------ Section:02 Content Media Queries ------*/
+  /*------- Featured Content For Desktop View -------*/
+  .featured-description {
+    font-size: 14px;
+  }
+  #featured-heading {
+    font-size: 50px;
+  }
+  #button-one {
+    width: 115px;
+    height: 35px;
+    font-size: 14px;
+  }
+  #button-two {
+    width: 115px;
+    height: 35px;
+    font-size: 14px;
+  }
+  #article-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #article-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /*------- 'Meat Our Team' Content For Desktop View -------*/
+  .team-img {
+    width: 80vw;
+  }
+  #team-content {
+    width: 90vw;
+  }
+  /*------- 'RESENT POST' Content For Desktop View -------*/
+  #recent-post-content {
+    width: 90vw;
+  }
+  #recent-post-content-para {
+    font-size: 18px;
+  }
+  #post-container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .post {
+    margin-left: 10px;
+  }
+  .post-img-container {
+    width: 90vw;
+    height: 350px;
+  }
+  .post-img {
+    width: 90vw;
+    height: 350px;
+  }
+  .post-description {
+    padding: 0px 20px;
+    width: 90vw;
+    height: 200px;
+  }
+  .post-heading {
+    font-size: 20px;
+  }
+  .post-para {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .post-button {
+    width: 140px;
+    height: 35px;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  /*------- 'GET IN TOUCH' Content For Desktop View -------*/
+  #touch-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #touch-content-heading {
+    font-size: 40px;
+  }
+  #touch-content-para {
+    font-size: 16px;
+  }
+  #subscribe-form {
+    width: 450px;
+    height: 50px;
+  }
+  #email-bar {
+    width: 350px;
+    height: 50px;
+    font-size: 25px;
+  }
+  #email-bar::placeholder {
+    font-size: 25px;
+  }
+  #subscribe-button {
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* ------- Smartphones Media Queries (480px-320px) ------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {}
+
+/* ------- Wearable Devices Media Queries (320px-Lesser) ------- */
+
+@media only screen and (max-width: 319px) {}
+
+/*------------------------------------------------------
+          * End of Section:04 Media Queries CSS
+------------------------------------------------------*/

@@ -1,0 +1,393 @@
+/*--------------css style sheet----------------
+          * Section:01 CSS Reset
+          * Section:02 Header CSS
+          * Section:03 Content CSS
+          * Section:04 Footer CSS
+          * Section:05 Media Queries CSS
+*--------------css style sheet----------------*/
+
+
+/*-------------- Colors Scheme in CSS -----------------
+          * Color: White           >       #ffffff
+          * Color: Black           >       #000000
+          * Color: DARK GREY       >       #414141
+          * Color: Prussian Blue   >       #003459
+          * Color: Meat Brown      >       #F3B73B
+          * Color: Vivid Cerulean  >       #00A8F8
+*-------------- Colors Scheme in CSS -----------------*/
+
+
+
+
+/*----------------------------------------------
+          * Section:01 CSS Reset
+----------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*----------------------------------------------
+          * End of Section:01 CSS Reset
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Header CSS
+----------------------------------------------*/
+
+.bg-gradient {
+  background: linear-gradient(to right, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
+}
+
+.dropdown-style {
+  color: #414141 !important;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dropdown-style:hover {
+  background-color: #444444;
+  color: white !important;
+}
+
+.dropdown-menu {
+  max-height: 75vh;
+  overflow-y: scroll !important;
+}
+
+.nav-style {
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-style:hover {
+  color: #414141 !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+#search-form {
+  display: flex;
+  position: absolute;
+  right: 100%;
+  z-index: 1;
+  width: 370px;
+  height: 40px;
+  transform: scale(0, 0);
+  transform-origin: right center;
+  transition: all 0.4s linear;
+}
+
+#search-bar {
+  width: 78%;
+  height: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#search-bar::placeholder {
+  font-size: 20px;
+  color: grey;
+}
+
+#search-button {
+  width: 22%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  border: none;
+  background-color: #414141;
+}
+
+#check-box {
+  display: none;
+}
+
+#search-form-opener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  width: 60px;
+  height: 40px;
+  margin: 0;
+}
+
+#search-form-opener:hover {
+  color: #414141;
+}
+
+#search-form-closer {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  width: 60px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  margin: 0;
+}
+
+#check-box:checked~#search-form {
+  transform: scale(1, 1);
+}
+
+#check-box:checked~#search-form-closer {
+  display: flex;
+}
+
+#check-box:checked~#search-form-opener {
+  display: none;
+}
+
+
+/*----------------------------------------------
+          * End of Section:02 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Content CSS
+----------------------------------------------*/
+
+#featured-content {
+  background-image: url(../images/featured-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 85vh;
+}
+
+#featured-h1 {
+  font-size: 70px !important;
+}
+
+.btn-style {
+  background-color: #0069D9 !important;
+  color: #fff !important;
+  border: 2px solid #0069D9;
+}
+
+.btn-style:hover {
+  background: transparent !important;
+  border: 2px solid white;
+}
+
+#services {
+  margin-top: 60px;
+  padding-top: 90px;
+}
+
+.services-ico {
+  font-size: 40px;
+  background-color: #007BFF;
+  border-radius: 50%;
+  color: white;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#blog {
+  margin-top: 150px;
+}
+
+#about-us {
+  margin-top: 180px;
+}
+
+.about-style {
+  flex-basis: 30%;
+}
+
+.social-ico {
+  padding: 6px;
+  border-radius: 5px;
+  border: 2px solid #0069d9;
+  margin-left: 5px;
+  background-color: #0069d9;
+  color: #fff;
+  font-size: 18px;
+}
+
+.social-ico:hover {
+  color: #414141;
+  background: transparent;
+  border-color: #7a5e86;
+}
+
+#contact-us {
+  margin-top: 150px;
+  background-color: #f9f9f9;
+  width: 100%;
+  padding: 100px 0px;
+}
+
+
+/*----------------------------------------------
+          * End of Section:03 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Footer CSS
+----------------------------------------------*/
+
+
+#main-footer {
+  width: 100%;
+  padding: 100px 0px;
+}
+
+.bg-color {
+  background-color: #f0e8e8d3 !important;
+}
+
+.color-light {
+  color: #d3d3d3d3;
+  text-decoration: none !important;
+}
+
+.color-light:hover {
+  color: #fff !important;
+}
+
+.color-white {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.color-white-hover:hover {
+  color: #414141 !important;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px 0;
+  color: white;
+  background-color: #414141;
+}
+
+
+/*----------------------------------------------
+          * End of Section:04 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:05 Media Queries CSS
+----------------------------------------------*/
+
+
+
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+*/
+
+
+
+/* ------- Very Large Screen Media Queries (1920px-Greater) ------- */
+
+@media only screen and (min-width : 1400px) {}
+
+/* ------- Desktops and Laptops Media Queries (1280px-1024px) ------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {}
+
+/* ------- Tablets landscape Media Queries (1024px-768px) ------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* ------- Tablets Portrait Media Queries (768px-480px) ------- */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {}
+
+/* ------- Smartphones Media Queries (480px-320px) ------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {}
+
+/* ------- Wearable Devices Media Queries (320px-Lesser) ------- */
+
+@media only screen and (max-width: 319px) {}
+
+
+@media (max-width: 767px) {
+  #search-section {
+    margin-bottom: 50px;
+  }
+
+  #search-form {
+    left: -200%;
+    top: 125%; 
+    transform-origin: center center;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  #search-form {
+    width: 280px;
+  }
+
+  #featured-h3 {
+    font-size: 25px;
+  }
+
+  #featured-h1 {
+    font-size: 45px !important;
+  }
+
+  .btn-style {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+
+
+
+
+/*------------------------------------------------------
+          * End of Section:05 Media Queries CSS
+------------------------------------------------------*/
+
+
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+	display : none;
+}

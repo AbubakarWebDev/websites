@@ -1,0 +1,823 @@
+/*--------------css style sheet----------------
+          * Section:01 Header CSS
+          * Section:02 Content CSS
+          * Section:03 Footer CSS
+          * Section:04 Media Queries CSS
+*--------------css style sheet----------------*/
+
+/*-------------- Colors Scheme in CSS -----------------
+          * Color: White           >       #ffffff
+          * Color: Black           >       #000000
+          * Color: DARK GREY       >       #414141
+          * Color: Prussian Blue   >       #003459
+          * Color: Meat Brown      >       #F3B73B
+          * Color: Vivid Cerulean  >       #00A8F8
+*-------------- Colors Scheme in CSS -----------------*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/*----------------------------------------------
+          * Section:01 Header CSS
+----------------------------------------------*/
+
+#main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/*-------------------------------
+    Nav bar for Desktop View
+--------------------------------*/
+
+#nav-bar-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    font-size: 25px;
+    color: #0070fa;
+    margin-left: 15px;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#menu-1 {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items-1 {
+    color: #000000;
+    font-size: 18px;
+    margin-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu-items-1::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.menu-items-1:hover::before {
+    width: 100%;
+    background-color: #0070fa;
+}
+
+.menu-items-1::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.menu-items-1:hover::after {
+    width: 100%;
+    background-color: #0070fa;
+}
+
+.menu-items-1:hover {
+    color: #0070FA;
+}
+
+/*------- Search Form For Desktop View -------*/
+
+#search-form-1 {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 30px;
+    margin-left: 15px;
+    border-bottom: 2px solid #0070fa;
+}
+
+#search-bar-1 {
+    width: 170px;
+    height: 25px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+#search-bar-1::placeholder {
+    color: #414141;
+    font-size: 18px;
+}
+
+#search-button-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0070fa;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#shopping-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100px;
+    font-size: 27px;
+    color: white;
+    margin-left: 15px;
+    border-radius: 0px 0px 100px 240px;
+    background: linear-gradient( #8495A0, #d7e6fa);
+}
+
+.fa-shopping-bag:hover {
+    color: #0070FA;
+}
+
+/*-------------------------------
+    Toggle bar for Mobile View
+--------------------------------*/
+
+#toggle-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    display: none;
+}
+
+#open-toggle-button {
+    display: flex;
+    align-items: center;
+    font-size: 37px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #0070fa;
+}
+
+#open-toggle-button:hover {
+    color: #0070fa;
+}
+
+#check-box-1 {
+    display: none;
+}
+
+/*-------------------------------
+ Navigtion Bar For Mobile View 
+--------------------------------*/
+
+#nav-bar-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #1D1F20;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#close-toggle-button {
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    margin: 20px 0px 10px 80%;
+}
+
+#close-toggle-button:hover {
+    color: #606BF1;
+}
+
+#menu-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-items-2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 20px 0px;
+    padding-bottom: 3px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+}
+
+.menu-items-2:hover {
+    color: #606BF1;
+}
+
+/*------- Search Form For Mobile View -------*/
+
+#search-form-2 {
+    display: flex;
+    width: 280px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    transform-origin: center top;
+    transform: scale(0, 0);
+}
+
+#search-bar-2 {
+    width: 220px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#search-bar-2::placeholder {
+    color: grey;
+    font-size: 20px;
+}
+
+#search-button-2 {
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #414141
+}
+
+#check-box-2 {
+    display: none;
+}
+
+#search-form-opener-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 60px;
+    height: 40px;
+    color: white;
+}
+
+#search-form-opener-2:hover {
+    color: #606BF1;
+}
+
+#search-form-closer-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 60px;
+    height: 40px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+}
+
+#search-form-closer-2:hover {
+    color: #606BF1;
+}
+
+#check-box-2:checked~#search-form-2 {
+    transform: scale(1, 1);
+}
+
+#check-box-2:checked~#search-form-closer-2 {
+    display: flex;
+}
+
+#check-box-2:checked~#search-form-opener-2 {
+    display: none;
+}
+
+/*---------------------------------
+  Header > Featured Content CSS
+----------------------------------*/
+
+#featured-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto 0;
+}
+
+#social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 50vh;
+    border-top-right-radius: 275px 309px;
+    border-bottom-right-radius: 328px 627px;
+    border-bottom-left-radius: 108px 345px;
+    background: linear-gradient( #8495A0, #d7e6fa);
+}
+
+.s-ico {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.s-ico:hover {
+    color: #0070FA;
+}
+
+#left-featured-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#left-featured-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#featured-heading-1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 2px 0px 0px black;
+    padding-bottom: 10px;
+}
+
+#featured-heading-2 {
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+#featured-description {
+    font-size: 18px;
+    color: #0070fa;
+    padding-bottom: 20px;
+}
+
+#featured-button {
+    width: 150px;
+    height: 40px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 100px;
+    background: none;
+}
+
+#featured-button:hover {
+    border: none;
+    color: white;
+    background: linear-gradient(to right, #649bff, #0070fa, #649bff);
+}
+
+#right-featured-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+#featured-img {
+    max-width: 39vw;
+    height: auto;
+}
+
+/*----------------------------------------------
+          * End of Section:01 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * End of Section:02 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * End of Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Media Queries CSS
+----------------------------------------------*/
+
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+*/
+
+/* ------- Very Large Screen Media Queries (1920px-Greater) ------- */
+
+@media only screen and (min-width: 1400px) {}
+
+/* ------- Desktops and Laptops Media Queries (1280px-1024px) ------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {
+    /*------ Section:01 Header Media Queries ------*/
+    .logo {
+        font-size: 20px;
+    }
+    .menu-items-1 {
+        font-size: 15px;
+    }
+    /*------- Search Form Media Queries -------*/
+    #search-form-1 {
+        width: 170px;
+        height: 25px;
+    }
+    #search-bar-1 {
+        width: 140px;
+        height: 20px;
+        font-size: 15px;
+    }
+    #search-bar-1::placeholder {
+        font-size: 15px;
+    }
+    #search-button-1 {
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+    }
+    #shopping-cart {
+        width: 80px;
+        height: 100px;
+        font-size: 20px;
+    }
+    /*------ Section:01 Header > Featured Content Media Queries ------*/
+    #social-icon {
+        width: 6%;
+        height: 40vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .s-ico {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    #featured-heading-1 {
+        font-size: 30px;
+    }
+    #featured-heading-2 {
+        font-size: 25px;
+    }
+    #featured-description {
+        font-size: 16px;
+    }
+    #featured-button {
+        width: 140px;
+        height: 35px;
+        font-size: 16px;
+    }
+    #featured-img {
+        max-width: 35vw;
+        height: auto;
+    }
+}
+
+/* ------- Tablets landscape Media Queries (1024px-768px) ------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /*------ Section:01 Header Media Queries ------*/
+    .logo {
+        font-size: 20px;
+    }
+    .menu-items-1 {
+        font-size: 15px;
+    }
+    /*------- Search Form Media Queries -------*/
+    #search-form-1 {
+        width: 170px;
+        height: 25px;
+    }
+    #search-bar-1 {
+        width: 140px;
+        height: 20px;
+        font-size: 15px;
+    }
+    #search-bar-1::placeholder {
+        font-size: 15px;
+    }
+    #search-button-1 {
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+    }
+    #shopping-cart {
+        width: 80px;
+        height: 100px;
+        font-size: 20px;
+    }
+    /*------ Section:01 Header > Featured Content Media Queries ------*/
+    #social-icon {
+        width: 6%;
+        height: 45vh;
+    }
+    .s-ico {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #featured-heading-1 {
+        font-size: 30px;
+    }
+    #featured-heading-2 {
+        font-size: 25px;
+    }
+    #featured-description {
+        font-size: 16px;
+    }
+    #featured-button {
+        width: 140px;
+        height: 35px;
+        font-size: 16px;
+    }
+    #featured-img {
+        max-width: 35vw;
+        height: auto;
+    }
+}
+
+/* ------- Tablets Portrait Media Queries (768px-480px) ------- */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    /*------ Section:01 Header Media Queries ------*/
+    .logo {
+        font-size: 20px;
+    }
+    .menu-items-1 {
+        font-size: 15px;
+    }
+    #nav-bar-1 {
+        display: none;
+    }
+    #toggle-bar {
+        display: flex;
+    }
+    #check-box-1:checked~#nav-bar-2 {
+        width: 100%;
+        height: 100vh;
+    }
+    #shopping-cart {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+    /*------ Section:01 Header > Featured Media Queries ------*/
+    #featured-content {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 100vh;
+    }
+    #left-featured-content {
+        width: 100%;
+    }
+    #left-featured-content-container {
+        align-items: center;
+    }
+    #social-icon {
+        width: 40%;
+        height: 8vh;
+        flex-direction: row;
+        border-radius: 100px;
+        background: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    }
+    .s-ico {
+        color: white;
+        margin: auto 0;
+        font-size: 22px;
+        margin: 0px 10px;
+    }
+    .s-ico:hover {
+        color: #414141;
+    }
+    #featured-heading-1 {
+        font-size: 25px;
+    }
+    #featured-heading-2 {
+        font-size: 20px;
+    }
+    #featured-description {
+        font-size: 14px;
+    }
+    #featured-button {
+        width: 140px;
+        height: 35px;
+        font-size: 16px;
+    }
+    #featured-img {
+        max-width: 400px;
+    }
+}
+
+/* ------- Smartphones Media Queries (480px-320px) ------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    /*------ Section:01 Header Media Queries ------*/
+    .logo {
+        font-size: 20px;
+    }
+    .menu-items-1 {
+        font-size: 15px;
+    }
+    #nav-bar-1 {
+        display: none;
+    }
+    #toggle-bar {
+        display: flex;
+    }
+    #check-box-1:checked~#nav-bar-2 {
+        width: 100%;
+        height: 100vh;
+    }
+    #shopping-cart {
+        width: 70px;
+        height: 80px;
+        font-size: 20px;
+    }
+    /*------ Section:01 Header > Featured Content Media Queries ------*/
+    #featured-content {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 100vh;
+    }
+    #left-featured-content {
+        width: 100%;
+    }
+    #left-featured-content-container {
+        align-items: center;
+    }
+    #social-icon {
+        width: 150px;
+        height: 5vh;
+        flex-direction: row;
+        border-radius: 100px;
+        background: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    }
+    .s-ico {
+        color: white;
+        margin: auto 0;
+        font-size: 16px;
+        margin: 0px 7px;
+    }
+    #featured-heading-1 {
+        text-align: center;
+        font-size: 20px;
+    }
+    #featured-heading-2 {
+        font-size: 16px;
+    }
+    #featured-description {
+        font-size: 12px;
+    }
+    #featured-button {
+        width: 110px;
+        height: 25px;
+        font-size: 12px;
+    }
+    #featured-img {
+        max-width: 300px;
+    }
+}
+
+/* ------- Wearable Devices Media Queries (320px-Lesser) ------- */
+
+@media only screen and (max-width: 319px) {
+    /*------ Section:01 Header Media Queries ------*/
+    .logo {
+        font-size: 15px;
+        margin: 0;
+    }
+    #open-toggle-button {
+        font-size: 25px;
+        margin-right: 8px;
+    }
+    .menu-items-1 {
+        font-size: 15px;
+    }
+    #nav-bar-1 {
+        display: none;
+    }
+    #toggle-bar {
+        display: flex;
+    }
+    #check-box-1:checked~#nav-bar-2 {
+        width: 100%;
+        height: 100vh;
+    }
+    #shopping-cart {
+        width: 50px;
+        height: 60px;
+        font-size: 18px;
+        margin-left: 8px;
+    }
+    /*------ Section:01 Header > Featured Content Media Queries ------*/
+    #featured-content {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 100vh;
+    }
+    #left-featured-content {
+        width: 100%;
+    }
+    #left-featured-content-container {
+        align-items: center;
+    }
+    #social-icon {
+        width: 140px;
+        height: 5vh;
+        flex-direction: row;
+        border-radius: 100px;
+        background: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    }
+    .s-ico {
+        color: white;
+        margin: auto 0;
+        font-size: 14px;
+        margin: 0px 7px;
+    }
+    #featured-heading-1 {
+        text-align: center;
+        font-size: 18px;
+    }
+    #featured-heading-2 {
+        text-align: center;
+        font-size: 14px;
+    }
+    #featured-description {
+        text-align: center;
+        font-size: 10px;
+    }
+    #featured-button {
+        width: 100px;
+        height: 25px;
+        font-size: 10px;
+    }
+    #featured-img {
+        max-width: 100vw;
+        height: auto;
+    }
+}
+
+/*------------------------------------------------------
+          * End of Section:04 Media Queries CSS
+------------------------------------------------------*/

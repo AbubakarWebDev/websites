@@ -1,0 +1,602 @@
+/*--------------css style sheet----------------
+          * Section:02 Header CSS
+          * Section:03 Content CSS
+          * Section:04 Footer CSS
+          * Section:05 Media Queries CSS
+*--------------css style sheet----------------*/
+
+/*-------------- Colors Scheme in CSS ---------------------
+          * Color: White             >       #FFFFFF
+          * Color: Black             >       #000000
+          * Color: DARK GREY         >       #414141
+          * Color: Meat Brown        >       #F3B73B
+          * Color: SLATE Blue        >       #5E5EBE
+          * Color: BRIGHT NAVY BLUE  >       #167EE5
+*-------------- Colors Scheme in CSS --------------------*/
+
+*,
+*::before,
+*::after {  
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/*----------------------------------------------
+          * Section:01 Header CSS
+-----------------------------------------------*/
+
+#main-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../image/featured-area-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*-------------------------------
+    Nav bar for Desktop View
+--------------------------------*/
+#nav-bar-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    width: 240px;
+    height: 60px;
+}
+
+#menu-1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+
+.menu-items-1 {
+    color: white;
+    font-size: 18px;
+    margin-left: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-items-1:hover {
+    color: #F3B73B;
+}
+
+/*------- Search Form For Desktop View -------*/
+
+#search-form-1 {
+    display: flex;
+    position: absolute;
+    left: 14.9%;
+    z-index: 1;
+    width: 370px;
+    height: 40px;
+    transform: scale(0, 0);
+    transform-origin: right center;
+}
+
+#search-bar-1 {
+    width: 290px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#search-bar-1::placeholder {
+    font-size: 20px;
+    color: grey;
+}
+
+#search-button-1 {
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: #167EE5;
+}
+
+#check-box-1 {
+    display: none;
+}
+
+#search-form-opener-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    width: 60px;
+    height: 40px;
+}
+
+#search-form-opener-1:hover {
+    color: #F3B73B;
+}
+
+#search-form-closer-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    width: 60px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#search-form-closer-1:hover {
+    color: #F3B73B;
+}
+
+#check-box-1:checked~#search-form-1 {
+    transform: scale(1, 1);
+}
+
+#check-box-1:checked~#search-form-closer-1 {
+    display: flex;
+}
+
+#check-box-1:checked~#search-form-opener-1 {
+    display: none;
+}
+
+/*-------------------------------
+    Toggle bar for Mobile View
+--------------------------------*/
+
+#toggle-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#open-toggle-button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 47px;
+    cursor: pointer;
+    color: white;
+}
+
+#open-toggle-button:hover {
+    color: #F3B73B;
+}
+
+#check-box-2 {
+    display: none;
+}
+
+/*-------------------------------
+ Navigtion Bar For Mobile View 
+--------------------------------*/
+
+#nav-bar-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: #414141;
+    transition: all 0.3s linear 0s;
+}
+
+#close-toggle-button {
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    margin: 20px 0px 10px 80%;
+}
+
+#close-toggle-button:hover {
+    color: #F3B73B;
+}
+
+#menu-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-items-2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 20px 0px;
+    padding-bottom: 3px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+}
+
+.menu-items-2:hover {
+    color: #F3B73B;
+}
+
+/*------- Search Form For Mobile View -------*/
+
+#search-form-2 {
+    display: flex;
+    width: 280px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    transform-origin: center top;
+    transform: scale(0, 0);
+}
+
+#search-bar-2 {
+    width: 220px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#search-bar-2::placeholder {
+    color: grey;
+    font-size: 20px;
+}
+
+#search-button-2 {
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #167EE5;
+}
+
+#check-box-3 {
+    display: none;
+}
+
+#search-form-opener-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 60px;
+    height: 40px;
+    color: white;
+}
+
+#search-form-opener-2:hover {
+    color: #F3B73B;
+}
+
+#search-form-closer-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 60px;
+    height: 40px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+}
+
+#search-form-closer-2:hover {
+    color: #F3B73B;
+}
+
+#check-box-3:checked~#search-form-2 {
+    transform: scale(1, 1);
+}
+
+#check-box-3:checked~#search-form-closer-2 {
+    display: flex;
+}
+
+#check-box-3:checked~#search-form-opener-2 {
+    display: none;
+}
+
+/*---------------------------------
+  Header > Featured Content CSS
+----------------------------------*/
+#featured-content {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat( 3 , max-content);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: auto 0;
+}
+
+.featured-description {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: 20px 0px;
+}
+
+#featured-heading {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+}
+
+#button-section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat( 2, max-content);
+    margin-top: 10px;
+}
+
+#button-one {
+    width: 140px;
+    height: 45px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+#button-one:hover {
+    background-color: rgba(243, 182, 59);
+}
+
+#button-two {
+    margin-left: 5px;
+    width: 140px;
+    height: 45px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: 3px solid white;
+    outline: none;
+}
+
+#button-two:hover {
+    color: black;
+    background-color: rgba(243, 182, 59);
+    border: none;
+}
+
+/*----------------------------------------------
+          * End of Section:01 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Content CSS
+----------------------------------------------*/
+/*----------------------------------------------
+          * End of Section:02 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * End of Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Media Queries CSS
+----------------------------------------------*/
+
+
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+*/
+
+
+
+/* ------- Very Large Screen Media Queries (1920px-Greater) ------- */
+
+@media only screen and (min-width: 1300px) {}
+
+/* ------- Desktops and Laptops Media Queries (1280px-1024px) ------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {}
+
+/* ------- Tablets landscape Media Queries (1024px-768px) ------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*------ Section:02 Content Media Queries ------*/
+
+    .featured-description {
+        font-size: 16px;
+    }
+    #featured-heading {
+        font-size: 58px;
+    }
+    #button-one {
+        width: 125px;
+        height: 40px;
+    }
+    #button-two {
+        width: 125px;
+        height: 40px;
+    }
+}
+
+/* ------- Tablets Portrait Media Queries (768px-480px) ------- */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    /*------ Section:01 Header Media Queries ------*/
+	
+    #nav-bar-1 {
+        display: none;
+    }
+    #toggle-bar {
+        display: flex;
+    }
+    #check-box-2:checked~#nav-bar-2 {
+        width: 100%;
+    }
+
+    /*------ Section:02 Content Media Queries ------*/
+
+    .featured-description {
+        font-size: 14px;
+    }
+    #featured-heading {
+        font-size: 45px;
+    }
+    #button-one {
+        width: 110px;
+        height: 35px;
+    }
+    #button-two {
+        width: 110px;
+        height: 35px;
+    }
+}
+
+/* ------- Smartphones Media Queries (480px-320px) ------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    /*------ Section:01 Header Media Queries ------*/
+
+    .logo {
+        width: 210px;
+        height: 55px;
+    }
+    #nav-bar-1 {
+        display: none;
+    }
+    #toggle-bar {
+        display: flex;
+    }
+    #open-toggle-button {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+    #check-box-2:checked~#nav-bar-2 {
+        width: 100%;
+    }
+
+    /*------ Section:02 Content Media Queries ------*/
+
+    .featured-description {
+        font-size: 12px;
+        padding: 0px 5px;
+    }
+    #featured-heading {
+        font-size: 40px;
+    }
+    #button-one {
+        width: 110px;
+        height: 35px;
+    }
+    #button-two {
+        width: 110px;
+        height: 35px;
+    }
+}
+
+/* ------- Wearable Devices Media Queries (320px-Lesser) ------- */
+
+@media only screen and (max-width: 319px) {
+
+    /*------ Section:01 Header Media Queries ------*/
+
+    .logo {
+        width: 150px;
+        height: 40px;
+    }
+    #nav-bar-1 {
+        display: none;
+    }
+    #toggle-bar {
+        display: flex;
+        height: 60px;
+    }
+    #open-toggle-button {
+        font-size: 30px;
+        margin-right: 5px;
+    }
+    #check-box-2:checked~#nav-bar-2 {
+        width: 100%;
+    }
+    #search-form-2 {
+        width: 230px;
+    }
+    #search-bar-2 {
+        width: 200px;
+    }
+    #search-button-2 {
+        width: 30px;
+    }
+
+    /*------ Section:02 Content Media Queries ------*/
+
+    .featured-description {
+        font-size: 10px;
+        padding: 0px 5px;
+    }
+    #featured-heading {
+        font-size: 30px;
+    }
+    #button-one {
+        width: 100px;
+        height: 30px;
+    }
+    #button-two {
+        width: 100px;
+        height: 30px;
+    }
+}
+
+
+/*------------------------------------------------------
+          * End of Section:05 Media Queries CSS
+------------------------------------------------------*/

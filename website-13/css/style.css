@@ -1,0 +1,330 @@
+/*--------------css style sheet----------------
+          * Section:01 CSS Reset
+          * Section:02 Header CSS
+          * Section:03 Content CSS
+          * Section:04 Footer CSS
+          * Section:05 Media Queries CSS
+*--------------css style sheet----------------*/
+
+
+/*-------------- Colors Scheme in CSS -----------------
+          * Color: White           >       #ffffff
+          * Color: Black           >       #000000
+          * Color: DARK GREY       >       #414141
+          * Color: Prussian Blue   >       #003459
+          * Color: Meat Brown      >       #F3B73B
+          * Color: Vivid Cerulean  >       #00A8F8
+*-------------- Colors Scheme in CSS -----------------*/
+
+
+
+
+/*----------------------------------------------
+          * Section:01 CSS Reset
+----------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*----------------------------------------------
+          * End of Section:01 CSS Reset
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Header CSS
+----------------------------------------------*/
+
+.bg-gradient {
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #a517ba, #5f1782);
+  background: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.nav-style {
+  text-transform: uppercase;
+  color: white !important;
+  transition: color 0.4s ease-in-out;
+}
+
+.nav-style:hover {
+  color: white !important;
+}
+
+/*----------------------------------------------
+          * End of Section:02 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Content CSS
+----------------------------------------------*/
+
+
+#featured-area {
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #a517ba, #5f1782);
+  background: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.link-style {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+#featured-title {
+  font-size: 35px;
+}
+
+.bottom-img {
+  width: 100%;
+}
+
+.title {
+  margin: 60px 0px;
+}
+
+.title::before {
+  content: '';
+  width: 200px;
+  height: 5px;
+  margin: 0 auto;
+  display: block;
+  transform: translateY(63px);
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #a517ba, #5f1782);
+  background: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.title::after {
+  content: '';
+  width: 70px;
+  height: 10px;
+  margin: 0 auto;
+  display: block;
+  transform: translateY(8px);
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #a517ba, #5f1782);
+  background: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.services-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  font-size: 3rem;
+  color: white;
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #a517ba, #5f1782);
+  background: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+.services-col {
+  padding: 20px !important;
+}
+
+#services .btn-primary {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 100px;
+  margin-bottom: 70px;
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #a517ba, #5f1782);
+  background: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+#about-us {
+  background-color: #F8F9FA;
+}
+
+#about-us ul li {
+  margin: 10px 0px;
+  margin-left: 20px;
+}
+
+#testimonial {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.testimonial {
+  border-left: 5px solid #5f1782;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+} 
+
+#contact-us {
+  padding: 80px 0px;
+}
+
+.divider {
+  background-color: #5f1782;
+  width: 150px;
+  height: 4px;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+/*----------------------------------------------
+          * End of Section:03 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Footer CSS
+----------------------------------------------*/
+.padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bg-color {
+  background-color: #f0e8e8d3 !important;
+}
+
+.color-light {
+  color: #d3d3d3d3;
+  text-decoration: none !important;
+}
+
+.color-light:hover {
+  color: #fff !important;
+}
+
+.color-white {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.color-white-hover:hover {
+  color: #414141 !important;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px 0;
+  color: white;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------
+          * End of Section:04 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:05 Media Queries CSS
+----------------------------------------------*/
+
+
+
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+*/
+
+/* -------------------BOOTSTRAP MEDIA QUERIES --------------------- */
+
+
+/* ---------------- MIN WIDTH OF DEVICES ------------------------ */
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 320px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* #nav-bar {
+    height: 80px;
+  } */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+
+/* ---------------- MAX WIDTH OF DEVICES ------------------------ */
+
+
+/* Extra small devices (portrait phones, less than 320px) */
+@media (max-width: 380px) {
+  .about-h1 {
+    font-size: 30px;
+  }
+
+  #about-us .title::after {
+    transform: translateY(19.5px);
+  }
+}
+
+/* Small devices (landscape phones, 576px and less) */
+@media (max-width: 575.98px) {}
+
+/* Medium devices (tablets, 768px and less) */
+@media (max-width: 767.98px) {}
+
+/* Large devices (desktops, 992px and less) */
+@media (max-width: 991.98px) {}
+
+/* Extra large devices (large desktops, 1200px and less) */
+@media (max-width: 1999.98px) {}
+
+
+/*------------------------------------------------------
+          * End of Section:05 Media Queries CSS
+------------------------------------------------------*/

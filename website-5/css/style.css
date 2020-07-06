@@ -1,0 +1,645 @@
+/*--------------css style sheet----------------
+          * Section:02 Header CSS
+          * Section:03 Content CSS
+          * Section:04 Footer CSS
+          * Section:05 Media Queries CSS
+*--------------css style sheet----------------*/
+
+/*-------------- Colors Scheme in CSS ---------------------
+          * Color: White             >       #FFFFFF
+          * Color: Black             >       #000000
+          * Color: DARK GREY         >       #414141
+          * Color: Meat Brown        >       #19dafa
+          * Color: SLATE Blue        >       #5E5EBE
+          * Color: BRIGHT NAVY BLUE  >       #19dafa
+*-------------- Colors Scheme in CSS --------------------*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*----------------------------------------------
+          * Section:01 Header CSS
+-----------------------------------------------*/
+
+#main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #41455A;
+}
+
+/*-------------------------------
+    Nav bar for Desktop View
+--------------------------------*/
+#nav-bar-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#menu-1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 10px;
+}
+
+.menu-items-1 {
+  color: white;
+  font-size: 18px;
+  margin-left: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-items-1:hover {
+  color: #19dafa;
+}
+
+/*------- Search Form For Desktop View -------*/
+
+#search-form-1 {
+  display: flex;
+  position: absolute;
+  left: 21%;
+  z-index: 1;
+  width: 370px;
+  height: 42px;
+  background-color: white;
+  transform: scale(0, 0);
+  transform-origin: right center;
+}
+
+#search-bar-1 {
+  width: 290px;
+  height: 42px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 20px;
+}
+
+#search-bar-1::placeholder {
+  font-size: 20px;
+  color: black;
+}
+
+#search-button-1 {
+  width: 80px;
+  height: 42px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  border: none;
+  background-color: rgb(33, 101, 190);
+}
+
+#check-box-1 {
+  display: none;
+}
+
+#search-form-opener-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  width: 60px;
+  height: 42px;
+}
+
+#search-form-opener-1:hover {
+  color: #19dafa;
+}
+
+#search-form-closer-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+  width: 60px;
+  height: 42px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+#search-form-closer-1:hover {
+  color: #19dafa;
+}
+
+#check-box-1:checked~#search-form-1 {
+  transform: scale(1, 1);
+}
+
+#check-box-1:checked~#search-form-closer-1 {
+  display: flex;
+}
+
+#check-box-1:checked~#search-form-opener-1 {
+  display: none;
+}
+
+/*-------------------------------
+    Toggle bar for Mobile View
+--------------------------------*/
+
+#toggle-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  display: none;
+}
+
+#open-toggle-button {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 47px;
+  cursor: pointer;
+  color: white;
+}
+
+#open-toggle-button:hover {
+  color: #19dafa;
+}
+
+#check-box-2 {
+  display: none;
+}
+
+/*-------------------------------
+  Navigtion Bar For Mobile View 
+--------------------------------*/
+
+#nav-bar-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  background: rgb(120, 120, 150);
+  transition: all 0.3s linear 0s;
+}
+
+#close-toggle-button {
+  cursor: pointer;
+  font-size: 50px;
+  color: white;
+  margin: 20px 0px 10px 80%;
+}
+
+#close-toggle-button:hover {
+  color: #19dafa;
+}
+
+#menu-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-items-2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 20px 0px;
+  padding-bottom: 3px;
+  position: relative;
+  color: white;
+  font-size: 20px;
+}
+
+.menu-items-2:hover {
+  color: #19dafa;
+}
+
+/*------- Search Form For Mobile View -------*/
+
+#search-form-2 {
+  display: flex;
+  width: 280px;
+  height: 40px;
+  margin: 10px 0px 20px 0px;
+  transform-origin: center top;
+  transform: scale(0, 0);
+}
+
+#search-bar-2 {
+  width: 220px;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#search-bar-2::placeholder {
+  color: grey;
+  font-size: 20px;
+}
+
+#search-button-2 {
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(33, 101, 190);
+}
+
+#check-box-3 {
+  display: none;
+}
+
+#search-form-opener-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  width: 60px;
+  height: 40px;
+  color: white;
+}
+
+#search-form-opener-2:hover {
+  color: #19dafa;
+}
+
+#search-form-closer-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  width: 60px;
+  height: 40px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.500);
+  color: white;
+}
+
+#search-form-closer-2:hover {
+  color: #19dafa;
+}
+
+#check-box-3:checked~#search-form-2 {
+  transform: scale(1, 1);
+}
+
+#check-box-3:checked~#search-form-closer-2 {
+  display: flex;
+}
+
+#check-box-3:checked~#search-form-opener-2 {
+  display: none;
+}
+
+/*---------------------------------
+     Header > Featured Content CSS
+----------------------------------*/
+
+#featured-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto 0;
+}
+
+#left-side-featured-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 46%;
+  padding-left: 3.5vw;
+  height: auto;
+}
+
+#featured-heading-1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 10px;
+}
+
+#featured-heading-2 {
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+#featured-description {
+  font-size: 14px;
+  color: rgb(73, 124, 149);
+  padding-bottom: 30px;
+}
+
+#featured-button {
+  width: 130px;
+  height: 40px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 100px;
+  background: none;
+}
+
+#featured-button:hover {
+  color: #19dafa;
+}
+
+#right-side-featured-content {
+  display: flex;
+  align-items: center;
+  margin-right: 2vw;
+  width: 45%;
+  height: auto;
+}
+
+#btc-img {
+  max-width: 47vw;
+  height: auto;
+}
+
+/*----------------------------------------------
+          * End of Section:01 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * End of Section:02 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * End of Section:03 Footer CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Media Queries CSS
+----------------------------------------------*/
+
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+  */
+
+/* ------- Very Large Screen Media Queries (1920px-Greater) ------- */
+
+@media only screen and (min-width: 1400px) {
+  /*------ Section:02 Content Media Queries ------*/
+  #left-side-featured-content {
+    width: 50%;
+  }
+  #featured-heading-1 {
+    font-size: 45px;
+  }
+  #featured-heading-2 {
+    font-size: 35px;
+  }
+  #featured-description {
+    font-size: 20px;
+  }
+  #featured-button {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+  }
+  #right-side-featured-content {
+    width: 50%;
+  }
+}
+
+/* ------- Desktops and Laptops Media Queries (1280px-1024px) ------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {}
+
+/* ------- Tablets landscape Media Queries (1024px-768px) ------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* ------- Tablets Portrait Media Queries (768px-480px) ------- */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /*------ Section:01 Header Media Queries ------*/
+  #nav-bar-1 {
+    display: none;
+  }
+  #toggle-bar {
+    display: flex;
+  }
+  #check-box-2:checked~#nav-bar-2 {
+    width: 100%;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  #featured-content {
+    flex-direction: column-reverse;
+  }
+  #right-side-featured-content {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  #btc-img {
+    max-width: 350px;
+    height: auto;
+  }
+  #left-side-featured-content {
+    margin-top: 50px;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  #featured-heading-1 {
+    font-size: 28px;
+  }
+  #featured-heading-2 {
+    font-size: 20px;
+  }
+  #featured-description {
+    font-size: 12px;
+  }
+  #featured-button {
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+/* ------- Smartphones Media Queries (480px-320px) ------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /*------ Section:01 Header Media Queries ------*/
+  .logo {
+    font-size: 20px;
+  }
+  #nav-bar-1 {
+    display: none;
+  }
+  #toggle-bar {
+    display: flex;
+  }
+  #open-toggle-button {
+    font-size: 40px;
+    margin-right: 10px;
+  }
+  #check-box-2:checked~#nav-bar-2 {
+    width: 100%;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  #featured-content {
+    flex-direction: column-reverse;
+  }
+  #right-side-featured-content {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  #btc-img {
+    max-width: 300px;
+    height: auto;
+  }
+  #left-side-featured-content {
+    margin-top: 50px;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  #featured-heading-1 {
+    font-size: 24px;
+  }
+  #featured-heading-2 {
+    font-size: 18px;
+  }
+  #featured-description {
+    font-size: 10px;
+  }
+  #featured-button {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+/* ------- Wearable Devices Media Queries (320px-Lesser) ------- */
+
+@media only screen and (max-width: 319px) {
+  /*------ Section:01 Header Media Queries ------*/
+  .logo  {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  #nav-bar-1 {
+    display: none;
+  }
+  #toggle-bar {
+    display: flex;
+    height: 60px;
+  }
+  #open-toggle-button {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  #check-box-2:checked~#nav-bar-2 {
+    width: 100%;
+  }
+  #search-form-2 {
+    width: 230px;
+  }
+  #search-bar-2 {
+    width: 200px;
+  }
+  #search-button-2 {
+    width: 30px;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  #featured-content {
+    flex-direction: column-reverse;
+  }
+  #right-side-featured-content {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  #btc-img {
+    max-width: 250px;
+    height: auto;
+  }
+  #left-side-featured-content {
+    margin-top: 30px;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  #featured-heading-1 {
+    font-size: 20px;
+  }
+  #featured-heading-2 {
+    font-size: 15px;
+  }
+  #featured-description {
+    font-size: 8px;
+  }
+  #featured-button {
+    width: 80px;
+    height: 25px;
+    font-size: 8px;
+  }
+}
+
+/*------------------------------------------------------
+          * End of Section:05 Media Queries CSS
+------------------------------------------------------*/

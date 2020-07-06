@@ -1,0 +1,144 @@
+/*
+  * -------------------------------------------------------------------------------- *
+    Responsive Media Queries - 1920 & Greater, 1280, 1024, 768, 480, 320 & Lesser
+          * 1920-Greater  >  Very Large Screen (Smart LED T.V)
+          * 1280-1024     >  Desktops and Laptops
+          * 1024-768      >  Tablets landscape
+          * 768-480       >  Tablets Portrait
+          * 480-320       >  Smartphones (portrait and landscape)
+          * 320-Lesser    >  Wearable Devices (Apple Watches & Moto 360 Watches)
+  * -------------------------------------------------------------------------------- *
+*/
+
+/* ------- Very Large Screen Media Queries (1920px-Greater) ------- */
+
+@media only screen and (min-width: 1400px) {}
+
+/* ------- Desktops and Laptops Media Queries (1280px-1024px) ------- */
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {}
+
+/* ------- Tablets landscape Media Queries (1024px-768px) ------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* ------- Tablets Portrait Media Queries (768px-480px) ------- */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #info-bar {
+    flex-direction: column;
+    padding: 10px 0px;
+  }
+  #info-bar-col-2 {
+    margin-top: 8px;
+  }
+  /*------ Section:01 Header Media Queries ------*/
+  #nav-bar-1 {
+    display: none;
+  }
+  #toggle-bar {
+    display: flex;
+  }
+  #check-box-2:checked~#nav-bar-2 {
+    width: 100%;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  .slider-heading {
+    font-size: 50px;
+  }
+  .slider-txt {
+    font-size: 16px;
+  }
+}
+
+/* ------- Smartphones Media Queries (480px-320px) ------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #info-bar {
+    flex-direction: column;
+  }
+  #info-bar-col-2 {
+    margin-top: 8px;
+  }
+  .info-bar-items {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  /*------ Section:01 Header Media Queries ------*/
+  #nav-bar-1 {
+    display: none;
+  }
+  #toggle-bar {
+    display: flex;
+  }
+  #open-toggle-button {
+    font-size: 40px;
+    margin-right: 10px;
+  }
+  #check-box-2:checked~#nav-bar-2 {
+    width: 100%;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  .slider-heading {
+    font-size: 35px;
+  }
+  .slider-txt {
+    font-size: 14px;
+  }
+  .slider-btn {
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+/* ------- Wearable Devices Media Queries (320px-Lesser) ------- */
+
+@media only screen and (max-width: 319px) {
+  #info-bar {
+    flex-direction: column;
+  }
+  #info-bar-col-2 {
+    margin-top: 8px;
+  }
+  .info-bar-items {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  /*------ Section:01 Header Media Queries ------*/
+  #nav-bar-1 {
+    display: none;
+  }
+  #toggle-bar {
+    display: flex;
+    height: 60px;
+  }
+  #open-toggle-button {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  #check-box-2:checked~#nav-bar-2 {
+    width: 100%;
+  }
+  #search-form-2 {
+    width: 230px;
+  }
+  #search-bar-2 {
+    width: 200px;
+  }
+  #search-button-2 {
+    width: 30px;
+  }
+  /*------ Section:02 Content Media Queries ------*/
+  .slider-heading {
+    font-size: 35px;
+  }
+  .slider-txt {
+    font-size: 10px;
+  }
+  .slider-btn {
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+  }
+}

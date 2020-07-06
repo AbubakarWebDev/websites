@@ -1,0 +1,522 @@
+/*--------------css style sheet----------------
+          * Section:01 CSS Reset
+          * Section:02 Header CSS
+          * Section:03 Content CSS
+          * Section:04 Footer CSS
+          * Section:05 Media Queries CSS
+*--------------css style sheet----------------*/
+
+
+/*-------------- Colors Scheme in CSS -----------------
+          * Color: White           >       #ffffff
+          * Color: Black           >       #000000
+          * Color: DARK GREY       >       #414141
+          * Color: Prussian Blue   >       #003459
+          * Color: Meat Brown      >       #ff8b00
+          * Color: Vivid Cerulean  >       #00A8F8
+*-------------- Colors Scheme in CSS -----------------*/
+
+
+
+
+/*----------------------------------------------
+          * Section:01 CSS Reset
+----------------------------------------------*/
+
+*,
+*::before,
+*::after {  
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body  {
+    font-family:"Roboto" ,sans-serif;
+}
+
+/*----------------------------------------------
+          * End of Section:01 CSS Reset
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:02 Header CSS
+----------------------------------------------*/
+
+#info-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0px;
+    background: linear-gradient(to right, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
+}
+
+.info-bar-items {
+    font-size: 18px;
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-envelope , .fa-phone-alt , .fa-twitter , .fa-instagram {
+    margin-right: 10px;
+}
+
+/*-------------------------------
+    Nav bar for Desktop View
+--------------------------------*/
+#nav-bar-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    background-color: white;
+}
+
+.logo {
+    font-size: 25px;
+    margin-left: 20px;
+    font-weight: bolder;
+    color: #ff8b00;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#menu-1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+
+.menu-items-1 {
+    color: black;
+    font-size: 20px;
+    margin:0px 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.menu-items-1:hover {
+    color: #ff8b00;
+}
+
+/*------- Search Form For Desktop View -------*/
+
+#search-form-1 {
+    display: flex;
+    position: absolute;
+    left: 23.5%;
+    z-index: 1;
+    width: 370px;
+    height: 40px;
+    transform: scale(0, 0);
+    transform-origin: right center;
+    transition: 0.4s all ease;
+}
+
+#search-bar-1 {
+    width: 290px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#search-bar-1::placeholder {
+    font-size: 20px;
+    color: grey;
+}
+
+#search-button-1 {
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: #167EE5;
+}
+
+#check-box-1 {
+    display: none;
+}
+
+#search-form-opener-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    color: black;
+    width: 60px;
+    height: 40px;
+}
+
+#search-form-opener-1:hover {
+    color: #ff8b00;
+}
+
+#search-form-closer-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    width: 60px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#check-box-1:checked~#search-form-1 {
+    transform: scale(1, 1);
+}
+
+#check-box-1:checked~#search-form-closer-1 {
+    display: flex;
+}
+
+#check-box-1:checked~#search-form-opener-1 {
+    display: none;
+}
+
+/*-------------------------------
+    Toggle bar for Mobile View
+--------------------------------*/
+
+#toggle-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: none;
+}
+
+#open-toggle-button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 45px;
+    cursor: pointer;
+    color: black;
+}
+
+#open-toggle-button:hover {
+    color: #ff8b00;
+}
+
+#check-box-2 {
+    display: none;
+}
+
+/*-------------------------------
+ Navigtion Bar For Mobile View 
+--------------------------------*/
+
+#nav-bar-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #292929;
+    transition: all 0.3s linear 0s;
+}
+
+#close-toggle-button {
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    margin: 20px 0px 10px 80%;
+}
+
+#close-toggle-button:hover {
+    color: #ff8b00;
+}
+
+#menu-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-items-2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 20px 0px;
+    padding-bottom: 3px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+}
+
+.menu-items-2:hover {
+    color: #ff8b00;
+}
+
+/*------- Search Form For Mobile View -------*/
+
+#search-form-2 {
+    display: flex;
+    width: 280px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    transform-origin: center top;
+    transform: scale(0, 0);
+    transition: 0.4s all ease;
+}
+
+#search-bar-2 {
+    width: 220px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#search-bar-2::placeholder {
+    color: grey;
+    font-size: 20px;
+}
+
+#search-button-2 {
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: #167EE5;
+}
+
+#check-box-3 {
+    display: none;
+}
+
+#search-form-opener-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 60px;
+    height: 40px;
+    color: white;
+}
+
+#search-form-opener-2:hover {
+    color: #ff8b00;
+}
+
+#search-form-closer-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 60px;
+    height: 40px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+}
+
+#search-form-closer-2:hover {
+    color: #ff8b00;
+}
+
+#check-box-3:checked~#search-form-2 {
+    transform: scale(1, 1);
+}
+
+#check-box-3:checked~#search-form-closer-2 {
+    display: flex;
+}
+
+#check-box-3:checked~#search-form-opener-2 {
+    display: none;
+}
+
+/*----------------------------------------------
+          * End of Section:02 Header CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:03 Content CSS
+----------------------------------------------*/
+
+#featured-slider {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-content-bg-1 {
+    background: url(../image/img-2.jpg);
+}
+
+.slider-content-bg-2 {
+    background: url(../image/img-3.jpg);
+}
+
+.slider-content-bg-3 {
+    background: url(../image/img-1.jpg);
+}
+
+.slider-content {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.slider-heading {
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider-txt {
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 20vw;
+}
+
+.slider-btn {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 45px;
+    margin-top: 10px;
+    outline: none;
+    font-weight: bolder;
+}
+
+.slider-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#prev , #next {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+#prev {
+    left: 0;
+    margin-left: 20px;
+}
+
+#next {
+    right: 0;
+    margin-right: 20px;
+}
+
+#prev:hover , #next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#dot-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgb(130, 130, 130);
+    margin: 20px 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.active , .dot:hover {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    margin: 10px 6px;
+}
+
+.transition {
+	animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  } 
+
+  to {
+    opacity: 2;
+  }
+}
+
+
+
+/*----------------------------------------------
+          * End of Section:03 Content CSS
+----------------------------------------------*/
+
+/*----------------------------------------------
+          * Section:04 Footer CSS
+----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------
+          * End of Section:04 Footer CSS
+----------------------------------------------*/
