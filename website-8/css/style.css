@@ -195,15 +195,22 @@ body {
 }
 
 #open-toggle-button {
-    display: flex;
-    align-items: center;
-    font-size: 35px;
+    width: 120px;
+    height: 40px;
+    font-size: 22px;
     cursor: pointer;
-    color: black;
+    margin-right: 20px;
+    font-weight: bolder;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #open-toggle-button:hover {
     color: #0070fa;
+    border: 1px solid #0070fa;
 }
 
 #check-box-2 {

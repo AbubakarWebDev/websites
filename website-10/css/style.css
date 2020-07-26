@@ -67,15 +67,23 @@ body {
   display: none;
 }
 
-#toggle-button {
-  color: #fff;
-  font-size: 35px;
-  margin-top: 5px;
+#open-toggle-button {
+  width: 120px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
   margin-right: 10px;
+  font-weight: bolder;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#toggle-button:hover {
-  color: #ebae36;
+#open-toggle-button:hover {
+  color: #F3B73B;
+  border: 1px solid #F3B73B;
 }
 
 #menu {

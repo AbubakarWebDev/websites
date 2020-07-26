@@ -182,16 +182,22 @@ body {
 }
 
 #open-toggle-button {
-    display: flex;
-    align-items: center;
-    font-size: 37px;
-    margin-left: 15px;
+    width: 120px;
+    height: 40px;
+    font-size: 22px;
     cursor: pointer;
+    margin-right: 20px;
+    font-weight: bolder;
+    border: 1px solid #0070fa;
     color: #0070fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #open-toggle-button:hover {
     color: #0070fa;
+    border: 1px solid #0070fa;
 }
 
 #check-box-1 {
