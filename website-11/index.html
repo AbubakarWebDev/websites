@@ -101,13 +101,53 @@
             <img id="front-wheel" src="image/wheel.png" alt="img">
             <img id="back-wheel" src="image/wheel.png" alt="img">
         </div>
+				
+		<button class="playBtn">Play</button>
+		<button class="pauseBtn">Pause</button>
+	</div>
 
-    </div>
+
+	<script>
+		let frontWheel = document.getElementById("front-wheel");
+		let backWheel = document.getElementById("back-wheel");
+		let car = document.getElementById("car-img");
+		let city = document.getElementById("city");
+		let road = document.getElementById("road");
+		let playBtn = document.querySelector(".playBtn");
+		let pauseBtn = document.querySelector(".pauseBtn");
+
+		playBtn.addEventListener("click" , ()=> {
+			frontWheel.style.animation = "wheel 1s linear 0s infinite";
+			backWheel.style.animation = "wheel 1s linear 0s infinite";
+			car.style.animation = "car 1s linear 0s infinite";
+			city.style.animation = "city 20s linear 0s infinite";
+			road.style.animation = "road 5s linear 0s infinite";
+		});
+
+		pauseBtn.addEventListener("click" , ()=> {
+			frontWheel.style.animation = "";
+			backWheel.style.animation = "";
+			car.style.animation = "";
+			city.style.animation = "";
+			road.style.animation = "";
+		});
+
+		document.addEventListener("mouseenter", ()=> {
+			playBtn.style.visibility = "visible";
+			playBtn.style.opacity = "1";
+			pauseBtn.style.visibility = "visible";
+			pauseBtn.style.opacity = "1";
+		});
+
+		document.addEventListener("mouseleave", ()=> {
+			playBtn.style.visibility = "hidden";
+		    pauseBtn.style.visibility = "hidden";
+			playBtn.style.opacity = "0";
+		    pauseBtn.style.opacity = "0";
+		});
 
 
-
-
-
+	</script>
 </body>
 
 </html>
