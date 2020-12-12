@@ -2,7 +2,13 @@ const count = document.getElementById('count');
 const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
-document.getElementById("music").volume = 0.1
+
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.1;
+  audio.loop = true;
+  audio.play();
+});
 
 const config = {
   birthdate: 'DEC 15, 2020',
