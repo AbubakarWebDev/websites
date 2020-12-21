@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
 const config = {
   birthdate: 'DEC 15, 2020',
-  name: 'Muaz'
+  name: 'Abubakar'
 };
 
 function hideEverything() {
